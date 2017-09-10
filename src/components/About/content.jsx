@@ -1,6 +1,6 @@
 export const content = [
   {item:"1",
-      p:"I am Huijie Zi. &nbsp; I hold a BSc degree in Information Systems and MSc degree in Internet Computing. &nbsp; I done my degree very long time ago. &nbsp; I find the technology moves so fast, every five years it jumped a big step, I hardly can catch up anymore.&nbsp; So I decided to continue my learning &nbsp; - &nbsp; my self learning in my spare time."
+      p:"I am Huijie Zi. &nbsp; I hold a BSc. degree in Information Systems and MSc degree in Internet Computing. &nbsp; I done my degree very long time ago. &nbsp; I find the technology moves so fast, every five years it jumped a big step, I hardly can catch up anymore.&nbsp; So I decided to continue my learning &nbsp; - &nbsp; my self learning in my spare time."
 },
 {item:"2",
   p: "With family in mind, I woun't be able to do full time school anymore. &nbsp; I started taking courses on Coursera, Edx, Udacity etc.  &nbsp; I find it's very challenge.&nbsp; Without practicing some of the concept regularly, I won't benefit much for my work especially I don't really use anything I learned in my work."
@@ -28,6 +28,9 @@ link: "https://www.youtube.com/channel/UC7R7bcH9-KEBDiGNP1mZnmw",
 description: "Web Development"},
 {name: "Nick Saporito",
 link:"https://www.youtube.com/channel/UCEQXp_fcqwPcqrzNtWJ1w9w",
-description: "Graphic Design"}
+description: "Graphic Design"},
+{name: "The Net Ninja",
+link:"https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg",
+description:"Web Development"},
 
 ]

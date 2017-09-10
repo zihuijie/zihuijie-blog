@@ -53,11 +53,13 @@ const ListLink = glamorous(Link)({
   lineHeight:'50px',
   height:'50px',
   display: 'block',
+  margin:'0',
   ':hover':{
     backgroundColor:`${colors.TOMATO_LIGHT}`,
   },
   [".active"]: {
     backgroundColor:`${colors.TOMATO_DARK}`,
+    boxShadow:`0px 1px 0px 0px`,
   },
   transition: 'all 0.5s ease 0s, visibility 0s linear 0.5s',
   [mediaQueries.phone]: {

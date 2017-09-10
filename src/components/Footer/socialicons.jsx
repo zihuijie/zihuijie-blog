@@ -15,15 +15,18 @@ import FaWechat from 'react-icons/lib/fa/wechat';
 const mediaQueries = {
     phone: '@media only screen and (min-width: 650px)',
   }
-  
+
 const Social = glamorous.div({
  position: 'relative',
- marginTop: '1.5em',
+ marginTop: '2em',
    display:'flex',
    flexFlow:'row wrap',
    justifyContent:'center',
    alignItems:'center',
     transform: 'translateY(-50%)',
+    [mediaQueries.phone]: {
+        marginTop: '1.5em',
+      }
 });
 
 const Link = glamorous.a({
@@ -65,38 +68,38 @@ const Span = glamorous.span({
 });
 const SocialIcons = () => (
 <Social>
-<Link href="https://www.facebook.com/jane.zi" 
-target="_blank"  
+<Link href="https://www.facebook.com/jane.zi"
+target="_blank"
 style={{backgroundColor: '#3B5998'}}>
 <Span><FaFacebook/></Span>
 </Link>
-<Link href="https://github.com/zihuijie/" 
-target="_blank"  
+<Link href="https://github.com/zihuijie/"
+target="_blank"
 style={{backgroundColor: '#24292e'}}>
 <Span><FaGithub/></Span>
 </Link>
-<Link href="https://www.linkedin.com/in/huijie-jane-zi-8a45533" 
-target="_blank"  
+<Link href="https://www.linkedin.com/in/huijie-jane-zi-8a45533"
+target="_blank"
 style={{backgroundColor: '#0077B5'}}>
 <Span><FaLinkedin/></Span>
 </Link>
-<Link href="https://twitter.com/zihuijie" 
-target="_blank"  
+<Link href="https://twitter.com/zihuijie"
+target="_blank"
 style={{backgroundColor: '#00ACEE'}}>
 <Span><FaTwitter/></Span>
 </Link>
-<Link href="http://www.pinterest.com/huijiezi/" 
-target="_blank"  
+<Link href="http://www.pinterest.com/huijiezi/"
+target="_blank"
 style={{backgroundColor: '#bd081c'}}>
 <Span><FaPinterest/></Span>
 </Link>
-<Link href="#" 
-target="_blank"  
+<Link href="#"
+target="_blank"
 style={{backgroundColor: '#09b507'}}>
 <Span><FaWechat/></Span>
 </Link>
-<Link href="mailto:zi.huijie@gmail.com" 
-target="_blank"  
+<Link href="mailto:zi.huijie@gmail.com"
+target="_blank"
 style={{backgroundColor: '#A8A8A8'}}>
 <Span><FaMail/></Span>
 </Link>

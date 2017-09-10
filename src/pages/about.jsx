@@ -1,10 +1,12 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
+import Portfolio from '../components/Portfolio';
 import PageHeader from '../components/Header';
-import bg from '../components/Header/work_bg.jpg';
 import { Wrapper } from '../components/Wrapper';
-import Work from '../components/Work';
+import bg from '../components/Header/about_bg.jpg';
+
+import About from '../components/About';
 
 const HeaderContainer= glamorous.div({
   height:'200px',
@@ -18,21 +20,16 @@ boxShadow: '0 1px 1px 0 rgba(0,0,0,.2)',
 });
 
 
-const WorkPage = () => (
-<section id="work"  className='main'>
+const AboutPage = () => (
+<section id="about"  className='main'>
 <HeaderContainer>
  <PageHeader>
-    My Work
+    About Me
      </PageHeader>
      </HeaderContainer>
 <Wrapper>
-<article>
-<Work />
-</article>
+<About />
 </Wrapper>
 </section>
 );
-
-
-
-export default WorkPage;
+export default AboutPage;

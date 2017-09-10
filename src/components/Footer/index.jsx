@@ -13,15 +13,18 @@ import bg from './footer_bg.png';
 const mediaQueries = {
     phone: '@media only screen and (min-width: 650px)',
   }
-  
-const Wrapper = glamorous.footer({ 
+
+const Wrapper = glamorous.footer({
      position:'absolute',
     bottom:'0',
+    right: '0',
+    left:'0',
     width:'100%',
     backgroundImage: `url(${bg})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    padding:'1em',
+    padding:'2em 1em 1em 1em',
+    zIndex: '1',
     });
 
     const Container = glamorous.div({
@@ -44,8 +47,13 @@ const Wrapper = glamorous.footer({
 
 const H2 = glamorous.h2({
     textAlign: 'center',
-    marginTop: '0.5em',
+    marginTop: '1em',
+    fontSize:'1em',
     color: `${colors.TOMATO}`,
+    [mediaQueries.phone]: {
+        marginTop: '0.5em',
+        fontSize:'1.5em',
+      }
 });
 
 const Copyright = glamorous.small({
@@ -57,18 +65,18 @@ const Copyright = glamorous.small({
 
 class Footer extends Component {
     render() {
-        return ( 
+        return (
         <Wrapper>
            <Container>
             <TextDecor>
-            <H2>Get in 
+            <H2>Get in
                 <span style={{marginLeft:'5px', marginRight:'5px'}}><FaPencil/></span>
                 Touch</H2>
-             </TextDecor>   
+             </TextDecor>
              <SocialIcons />
                 <Copyright>
     {config.copyright}
-    </Copyright>       
+    </Copyright>
            </Container>
         </Wrapper>
         );

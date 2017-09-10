@@ -1,66 +1,69 @@
 import React from 'react';
+import glamorous from 'glamorous';
 
-import {Button, Container, Divider, Grid, Header, Icon, Image, List, Segment } from 'semantic-ui-react';
-
+import FaYoutube from 'react-icons/lib/fa/youtube';
+import { colors } from '../../utils/constants';
 import config from '../../../data/SiteConfig';
 
 import logo from '../../../static/logos/logo.png';
 import { content , sharelinks } from './content';
 
+import { Image } from '../Wrapper';
+
+const LinkWrapper = glamorous.ul({
+    display:'block',
+    padding: '2em',
+    backgroundColor: `${colors.WHITE}`,
+    boxShadow:`-2px 2px 2px 2px ${colors.TOMATO_LIGHT}`,
+});
+
+const Link = glamorous.li({
+    listStyle:'none',
+});
+
+const UserLink = glamorous.a({
+    marginLeft:'1em',
+    color: `${colors.TOMATO_DARK}`,
+    textDecoration:`underline solid ${colors.TOMATO_DARK}`,
+    ':hover': {
+        textDecorationStyle:'wavy',
+        textDecorationColor:'initial',
+    },
+    marginBottom:'1em',
+});
+
+
 const UserfulLinks = () => (
-    <List relaxed>
-        
+    <LinkWrapper>
 {sharelinks.map(l => (
-    <List.Item key={l.name} >
-            <List.Icon name="youtube" />
-            <List.Content>   
-    <List.Header as="a"    
-    href={l.link}
-    target="_blank">
-    {l.name}</List.Header>
-    <List.Description>- {l.description}</List.Description>
-   </List.Content>
-    </List.Item>
+    <Link key={l.name} >
+            <FaYoutube size="35" color="hsl(0, 100%, 50%)"/>
+            <UserLink href={l.link} target="_blank">{l.name} - {l.description}</UserLink>
+    </Link>
 ))}
-    </List>
+    </LinkWrapper>
 );
 
 const About = () => (
-<Container text style={{ marginTop: '3em' }}>    
-     <Header>
-    <Header.Content > Welcome to Zihuijie.io </Header.Content>
-      <Image src={logo} size="small" shape="circular" style={{marginLeft:'1em'}}/>
-</Header>
+<div>
+    <h1>
+        <Image src={logo} />
+        Welcome to Zihuijie.io
+        </h1>
      {content.map(c => (
-        <p dangerouslySetInnerHTML={{ __html: c.p }} 
+        <p dangerouslySetInnerHTML={{ __html: c.p }}
         key={c.item}/>
-       
      ))}
-     <Segment compact raised>
-<UserfulLinks />
-</Segment>
-<Header>
-    <Header.Content> Contact </Header.Content>
-    </Header>
-    <p>If you want to get in touch with me, please write a email or contact me with the Social Links below.</p>
-    <Container textAlign="center" style={{marginBottom: '1em', marginTop: '1em'}}>
-                           
-          {config.userLinks.map(link => (
-                <Button key={link.label} 
-                circular
-                size="big" 
-                color="olive" 
-                icon={link.label}                 
-                href={link.url}
-                target="_blank"
-                key={link.label}
-                />
-            ))
 
-          }           
-         
-        </Container>
-    </Container>
+
+<UserfulLinks />
+
+<div>
+    <h1> Contact </h1>
+    <p>If you want to get in touch with me, please write an email or contact me with the Social Links below.
+        </p>
+        </div>
+    </div>
 );
 
 export default About;

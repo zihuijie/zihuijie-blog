@@ -2,9 +2,25 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import glamorous from 'glamorous';
+
+import { rhythm } from '../utils/typography';
 
 import PageHeader from '../components/Header';
-import { rhythm } from '../utils/typography';
+import { Wrapper } from '../components/Wrapper';
+import bg from '../components/Header/blog_bg.jpg';
+
+const HeaderContainer= glamorous.div({
+  height:'200px',
+  backgroundImage:`url(${bg})`,
+backgroundSize:'100% 100%',
+backgroundRepeat:'no-repeat',
+backgorundPosition:'center center',
+backgroundBlendMode:'luminosity',
+borderBottom: '1px solid #ccc',
+boxShadow: '0 1px 1px 0 rgba(0,0,0,.2)',
+});
+
 
 class BlogIndex extends React.Component {
   render() {
@@ -14,8 +30,10 @@ class BlogIndex extends React.Component {
     return (
       <section id="blog" className='main'>
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
-        
-        <PageHeader>My Blog</PageHeader>  
+      <HeaderContainer>
+        <PageHeader>My Blog</PageHeader>
+        </HeaderContainer>
+      <Wrapper>
         <article className='content'>
         <div>
         {posts.map(post => {
@@ -46,6 +64,7 @@ class BlogIndex extends React.Component {
         })}
         </div>
         </article>
+        </Wrapper>
       </section>
     )
   }
