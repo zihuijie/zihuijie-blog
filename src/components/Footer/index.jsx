@@ -21,7 +21,7 @@ const Wrapper = glamorous.footer({
     left:'0',
     width:'100%',
     backgroundImage: `url(${bg})`,
-    backgroundSize: 'cover',
+    backgroundSize: '100%',
     backgroundPosition: 'center',
     padding:'2em 1em 1em 1em',
     zIndex: '1',

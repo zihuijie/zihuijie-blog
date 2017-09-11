@@ -12,6 +12,7 @@ backgroundSize:'100% 100%',
 backgroundRepeat:'no-repeat',
 backgorundPosition:'center center',
 backgroundBlendMode:'luminosity',
+backgroundAttachment:'fixed',
 borderBottom: '1px solid #ccc',
 boxShadow: '0 1px 1px 0 rgba(0,0,0,.2)',
 });

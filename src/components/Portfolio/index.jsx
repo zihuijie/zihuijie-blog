@@ -6,17 +6,16 @@ import { colors } from '../../utils/constants';
 import { Image } from '../Wrapper';
 import logo from '../../../static/logos/logo.png';
 
-import PortfolioCards from './PortfolioCards';
+import PortfolioCards from './portfoliocards';
 
 const Portfolio = () => (
 <div>
-
-<Image src={logo}/><h1>
+<h1>
+<Image src={logo}/>
     Web Development
 </h1>
 
  <PortfolioCards />
-
     </div>
 );
 
