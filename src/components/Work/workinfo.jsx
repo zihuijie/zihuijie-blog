@@ -9,33 +9,40 @@ export const sectionlist = [
   summary:'some userful resources you might be interested'},
 ]
 
+export const summary = 'I have worked for EPC industry for over 15 years, traveled many countries and worked with different clients.'
 export const timelines =[
   {company: 'Self-employed',
   date:'Nov 2015',
- desc:'Web Development & Data analyst'
+ title:'Web Development & Data analyst',
+ desc:'done what?',
 },
 {company: 'Devon Energy',
 date:'Apr 2013',
-desc:'Data analyst & Material Management'
+title:'Data analyst & Material Management',
+desc:'done what?',
 },
 {company: 'Bantrel Co.',
 date:'Aug 2010',
-desc:'Data analyst & Material Management'
+title:'Data analyst & Material Management',
+desc:'done what?',
 },
 {company: 'Petro-Canada',
 date:'Jan 2008',
-desc:'Senior IS Specialist.'
+title:'Senior IS Specialist.',
+desc:'done what?',
 },
 {company: 'Bantrel Co.',
 date:'Dec 2004',
-desc:'Procurement Systems Technical Lead'
+title:'Procurement Systems Technical Lead',
+desc:'done what?',
 },
 {company: 'COINs',
 date:'Jan 2002',
-desc:'Consultant'
+title:'Consultant'
 },
 {company: 'Bechtel International',
 date:'Aug 1996',
 desc:'System Analyst'
 },
 ]
+

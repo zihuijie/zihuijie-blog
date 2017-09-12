@@ -3,14 +3,14 @@ import glamorous from 'glamorous';
 
 
 import { colors } from '../../utils/constants';
-import { timelines } from './workinfo';
+import { timelines, summary } from './workinfo';
 
 import './timeline.scss';
 
 const mediaQueries = {
   phone: '@media only screen and (min-width: 850px)',
 }
-const Header =() => (
+const Header =({summary}) => (
 <div >
   <h2
   style={{textAlign:'center',
@@ -20,8 +20,7 @@ const Header =() => (
   My Work Timeline
   </h2>
   <p style={{textAlign:'center',
-  marginBottom:'0'}}>
-  travel back to times</p>
+  marginBottom:'0'}}>{summary}</p>
 </div>
 );
 
@@ -32,7 +31,7 @@ const Wrapper = glamorous.div({
 
 const TimeLine = () => (
   <Wrapper>
-<Header />
+<Header summary={summary}/>
 <ul className='timeline'>
   {timelines.map((work, item) => (
     <li key={work.date}>
@@ -42,7 +41,10 @@ const TimeLine = () => (
         <span className="flag">{work.company}</span>
         <span className="time-wrapper"><span className="time">{work.date}</span></span>
       </div>
-      <div className="desc">{work.desc}</div>
+      <div className="desc">
+      <h5>{work.title}</h5>
+        <p>{work.desc}</p>
+        </div>
     </div>
   </li>
   ))}

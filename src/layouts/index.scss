@@ -64,16 +64,21 @@ h1 {
 .header {
   min-height: $header-height;
 }
+.wrapper {
+  margin: 0 auto;
+  min-height: 100%;
+  padding-bottom: 35vh;
+  width: 100%;
+  position: relative;
+}
 .footer {
   height: $footer-height;
-  margin-top: auto;
+padding: 5px 0;
+width: 100%;
+position: fixed;
+margin-top: -30px;
+overflow: hidden;
 }
-
-.wrapper {
- min-height: 100%;
- margin-bottom: 38vh;
-}
-
 .main {
   display: flex;
   flex-direction: column;
