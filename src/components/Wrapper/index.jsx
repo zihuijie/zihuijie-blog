@@ -7,7 +7,9 @@ const mediaQueries = {
 
 export const Wrapper = glamorous.div({
   maxWidth:'90%',
-  margin:'auto',
+  minHeight:'100%',
+  position: 'relative',
+  margin:'0 auto',
   marginTop: '2em',
   marginBottom:'4em',
   padding: '2em',

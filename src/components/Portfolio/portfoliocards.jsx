@@ -12,7 +12,6 @@ const Button = glamorous.a({
     display: 'inline-block',
     verticalAlign: 'bottom',
     position: 'relative',
-    transition: '.5s',
     color: `${colors.BLUE_DARK}`,
     marginLeft: '15px',
     marginRight: '15px',
@@ -96,7 +95,7 @@ const PortfolioCards = ( ) => (
                 description={p.description}
                 link={p.link}
                 />
-                    {i != (portfolios.length -1 ) && <LineBreak />}
+                    {i !== (portfolios.length -1 ) && <LineBreak />}
                 </div>
               )}
 

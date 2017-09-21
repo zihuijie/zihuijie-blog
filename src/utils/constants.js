@@ -17,7 +17,7 @@ export const colors = {
   GREEN_LIGHT: '#33ab74',
   GREEN_LIME: '#a9e884',
   TOMATO_DARK: '#7f3123',
-  TOMATO_SHADOW:'#e5593f',
+  TOMATO_SHADOW: '#e5593f',
   TOMATO_LIGHT: '#ffb1a3',
   TOMATO: '#ff6347',
   PINK: '#e84f89',

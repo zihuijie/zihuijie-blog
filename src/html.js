@@ -1,3 +1,6 @@
+/* eslint import/no-unresolved:"off" */
+/* eslint import/extensions:"off" */
+/* eslint global-require:"off" */
 import React from 'react'
 import Helmet from 'react-helmet'
 
@@ -8,6 +11,7 @@ if (process.env.NODE_ENV === `production`) {
   try {
     stylesStr = require(`!raw-loader!../public/styles.css`)
   } catch (e) {
+    /* eslint no-console: "off"*/
     console.log(e)
   }
 }
@@ -25,7 +29,7 @@ module.exports = class HTML extends React.Component {
       )
     }
     return (
-      <html>
+      <html lang="en">
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -37,7 +41,7 @@ module.exports = class HTML extends React.Component {
           {this.props.headComponents}
           {css}
         </head>
-        <body>
+        <body className="site">
           {this.props.preBodyComponents}
           <div
             key={`body`}

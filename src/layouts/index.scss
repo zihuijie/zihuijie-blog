@@ -45,13 +45,15 @@ body{
   min-height: 100vh;
 }
 
-h1 {
+h1, h2, h3, h4, h5 {
   font-family: $header-font;
+}
+h1 {
   font-size: 1em;
   font-weight: 400;
   line-height: 1.2;
   @media (min-width: 650px) {
-    font-size: 2.25em;
+    font-size: 2em;
   }
 }
 
@@ -67,26 +69,19 @@ h1 {
 .wrapper {
   margin: 0 auto;
   min-height: 100%;
-  padding-bottom: 35vh;
   width: 100%;
   position: relative;
 }
-.footer {
-  height: $footer-height;
-padding: 5px 0;
-width: 100%;
-position: fixed;
-margin-top: -30px;
-overflow: hidden;
-}
-.main {
+
+.site {
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
+min-height: 100vh;
 
 }
-.content {
-  max-width: 800px;
+.site-content {
+  flex: 1;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }

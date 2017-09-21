@@ -1,7 +1,5 @@
 import React from 'react';
-import glamorous from 'glamorous';
 
-import { colors } from '../../utils/constants';
 import logo from '../../../static/logos/logo.png';
 import { Image } from '../Wrapper';
 import TimeLine from './timeline';

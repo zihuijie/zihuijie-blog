@@ -5,10 +5,12 @@ import Helmet from 'react-helmet'
 import glamorous from 'glamorous';
 
 import { rhythm } from '../utils/typography';
+import { colors } from '../utils/constants';
 
 import PageHeader from '../components/Header';
 import { Wrapper } from '../components/Wrapper';
 import bg from '../components/Header/blog_bg.jpg';
+
 
 const HeaderContainer= glamorous.div({
   height:'200px',
@@ -32,10 +34,10 @@ class BlogIndex extends React.Component {
       <section id="blog" className='main'>
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
       <HeaderContainer>
-        <PageHeader>My Blog</PageHeader>
+        <PageHeader>{siteTitle}</PageHeader>
         </HeaderContainer>
       <Wrapper>
-        <article className='content'>
+        <article className='site-content'>
         <div>
         {posts.map(post => {
           if (post.node.path !== '/404/') {
@@ -49,10 +51,13 @@ class BlogIndex extends React.Component {
                   }}
                 >
                   <Link
-                    style={{ boxShadow: 'none' }}
+                    style={{ boxShadow: 'none',
+                    fontFamily: 'Raleway',
+                    fontWeight:'bold',
+                    color: `${colors.TOMATO_DARK}`}}
                     to={post.node.frontmatter.path}
                   >
-                    {post.node.frontmatter.title}
+                    {title}
                   </Link>
                 </h3>
                 <small>
@@ -72,11 +77,11 @@ class BlogIndex extends React.Component {
 }
 
 BlogIndex.propTypes = {
-  route: React.PropTypes.object,
+  route: React.PropTypes.element,
 }
 
 export default BlogIndex
-
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query IndexQuery {
     site {

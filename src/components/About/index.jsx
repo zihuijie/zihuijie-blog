@@ -48,7 +48,7 @@ const About = () => (
 <div>
     <h1>
         <Image src={logo} />
-        Welcome to Zihuijie.io
+        Welcome to Zihuijie.github.io
         </h1>
      {content.map(c => (
         <p dangerouslySetInnerHTML={{ __html: c.p }}

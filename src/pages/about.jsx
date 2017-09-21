@@ -28,7 +28,7 @@ const AboutPage = () => (
      </PageHeader>
      </HeaderContainer>
 <Wrapper>
-<About />
+<About className='site-content'/>
 </Wrapper>
 </section>
 );

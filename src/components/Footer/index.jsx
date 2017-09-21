@@ -15,7 +15,8 @@ const mediaQueries = {
   }
 
 const Wrapper = glamorous.footer({
-     position:'absolute',
+     position:'relative',
+     height:'35vh',
     bottom:'0',
     right: '0',
     left:'0',
@@ -25,6 +26,7 @@ const Wrapper = glamorous.footer({
     backgroundPosition: 'center',
     padding:'2em 1em 1em 1em',
     zIndex: '1',
+     overflow: 'hidden',
     });
 
     const Container = glamorous.div({

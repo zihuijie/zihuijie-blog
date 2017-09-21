@@ -19,14 +19,14 @@ const HeaderContainer= glamorous.div({
 
 
 const PortfolioPage = () => (
-<section id="portfolio"  className='main'>
+<section id="portfolio" className='main'>
        <HeaderContainer>
         <PageHeader>
             Portfolio
             </PageHeader>
             </HeaderContainer>
 <Wrapper>
-    <article>
+    <article className='site-content'>
 <Portfolio />
 </article>
 </Wrapper>

@@ -27,7 +27,7 @@ const WorkPage = () => (
      </PageHeader>
      </HeaderContainer>
 <Wrapper>
-<article>
+<article className='site-content'>
 <Work />
 </article>
 </Wrapper>
