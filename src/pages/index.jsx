@@ -61,7 +61,7 @@ class BlogIndex extends React.Component {
                   </Link>
                 </h3>
                 <small>
-                  {post.node.frontmatter.date}
+                  {post.node.frontmatter.date} 
                 </small>
                 <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
               </div>
@@ -93,9 +93,11 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          timeToRead
           frontmatter {
             path
             date(formatString: "DD MMMM, YYYY")
+            tags
           }
           frontmatter {
             title

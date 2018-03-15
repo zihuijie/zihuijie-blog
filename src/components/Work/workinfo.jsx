@@ -12,7 +12,7 @@ export const sectionlist = [
 export const summary = 'I have worked for EPC industry for over 15 years, traveled many countries and worked with different clients.'
 export const timelines =[
   {company: 'Self-employed',
-  date:'Nov 2015',
+  date:'Dec 2015',
  title:'Web Development & Data analyst',
  desc:'I like to learn and build. I build website and mobile apps in React use Google firebase as backend. I also love data analyst in python. ',
 },

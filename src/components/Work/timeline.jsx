@@ -171,11 +171,11 @@ const TimeLine = () => (
       <h5 style={{textAlign:'center',
     fontFamily: 'Raleway', marginBottom:'0.7em'}}>{work.company}</h5>
       <Desc>
-      <p style={{ fontSize:'14px',}}>{work.title}</p>
+      <p style={{ fontSize:'14px',lineHeight:'1em'}}>{work.title}</p>
         <p>
           <span style={{marginRight:'5px'}}><FaCalendar color={`${colors.GREEN}`}/></span>
         {work.date}</p>
-        <p style={{ fontSize:'12px',}}>{work.desc}</p>
+        <p style={{ fontSize:'12px', lineHeight: '1em'}}>{work.desc}</p>
 </Desc>
       </JobWrapper>
   </ContentWrapper>
